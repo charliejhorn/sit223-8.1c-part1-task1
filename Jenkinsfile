@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Print README') {
+            steps {
+                sh 'cat ~/README.md'
+            }
+        }
         stage('build') {
             steps {
                 echo "Building code using Maven"
